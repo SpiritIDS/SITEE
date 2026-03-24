@@ -2,101 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vortex</title>
     <style>
-        /* Add your CSS styles here */
+        :root {
+            --void: #000;
+            --deep: #1a1a1a;
+            --card: #ffffff;
+            --violet: #8a2be2;
+            --cyan: #00ffff;
+            --white: #ffffff;
+        }
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+            background-color: var(--deep);
+            color: var(--white);
         }
-        /* Hero Section */
-        .hero {
-            background: url('hero-bg.jpg') no-repeat center center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero h1 {
-            color: white;
-            font-size: 4em;
-        }
-        /* Services Section */
-        .services {
-            padding: 50px;
-            display: flex;
-            justify-content: space-around;
-        }
-        /* Process Section */
-        .process {
-            background-color: #f8f8f8;
-            padding: 30px;
-        }
-        /* Automatisations Section */
-        .automatisations {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        /* Formules Section */
-        .formules {
-            padding: 30px;
-        }
-        /* CTA Section */
-        .cta {
-            background-color: #ff4c4c;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-        }
-        /* Custom Cursor */
-        body {
-            cursor: url('custom-cursor.png'), auto;
-        }
+        /* Additional CSS styles */
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Pricing</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
     <section class="hero">
         <h1>Welcome to Vortex</h1>
+        <p>Animated Text Here</p>
     </section>
-
-    <section class="services">
-        <div class="service-item">Service 1</div>
-        <div class="service-item">Service 2</div>
+    <section class="services-grid">
+        <h2>Our Services</h2>
+        <div class="services">
+            <!-- Service items -->
+        </div>
     </section>
-
-    <section class="process">
+    <section class="process-steps">
         <h2>Our Process</h2>
+        <div class="steps">
+            <!-- Process steps here -->
+        </div>
     </section>
-
     <section class="automatisations">
         <h2>Automatisations</h2>
+        <div class="workflow-visualizations">
+            <!-- Workflow visualizations here -->
+        </div>
     </section>
-
-    <section class="formules">
-        <h2>Formules</h2>
+    <section class="pricing">
+        <h2>Pricing Formulas</h2>
+        <!-- Pricing details here -->
     </section>
-
-    <div class="cta">
-        <h2>Contact Us Today!</h2>
-    </div>
-
+    <section class="cta">
+        <h2>Call to Action</h2>
+        <!-- CTA details here -->
+    </section>
     <footer>
-        <p>&copy; 2026 Vortex. All rights reserved.</p>
+        <p>&copy; 2026 Vortex. All Rights Reserved.</p>
     </footer>
-
     <script>
-        // Add your JavaScript code here
-        document.addEventListener('DOMContentLoaded', function () {
-            // Navigation effects and animations
-        });
+        // Custom cursor JavaScript
+        // Navigation scroll effects
+        // Counter animations
     </script>
 </body>
 </html>
