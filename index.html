@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Vortex Website</title>
-    <script src="animations.js" defer></script>
+    <title>French Vortex</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .hero { background-color: violet; color: white; padding: 50px; text-align: center; }
+        .logos { display: flex; justify-content: center; padding: 20px; }
+        .service { background-color: cyan; margin: 10px; padding: 20px; border-radius: 5px; }
+        .ctas { background-color: darkblue; color: white; text-align: center; padding: 30px; }
+        /* Additional styles as needed */
+    </style>
 </head>
 <body>
-    <header class="hero">
-        <h1>Welcome to Vortex</h1>
-    </header>
-    <section class="logos">
-        <h2>Our Partners</h2>
-        <div class="logo-container">
-            <img src="logo1.png" alt="Logo 1">
-            <img src="logo2.png" alt="Logo 2">
-        </div>
-    </section>
-    <section class="services">
-        <h2>Our Services</h2>
-        <p>We provide top-notch solutions!</p>
-    </section>
-    <section class="process">
-        <h2>Our Process</h2>
-        <ol>
-            <li>Step One</li>
-            <li>Step Two</li>
-            <li>Step Three</li>
-        </ol>
-    </section>
-    <section class="automatizations">
+    <div class="hero">
+        <h1>Bienvenue à French Vortex</h1>
+        <p>Découvrez nos services et offres exclusives!</p>
+    </div>
+    <div class="logos">
+        <img src="logo1.png" alt="Logo 1">
+        <img src="logo2.png" alt="Logo 2">
+    </div>
+    <div class="services">
+        <div class="service">Service 1</div>
+        <div class="service">Service 2</div>
+        <div class="service">Service 3</div>
+    </div>
+    <div class="process">
+        <h2>Notre Processus</h2>
+        <p>Description du processus ici.</p>
+    </div>
+    <div class="automatisations">
         <h2>Automatisations</h2>
-        <p>Automation is key for efficiency.</p>
-    </section>
-    <section class="formules">
-        <h2>Formulas</h2>
-        <p>Learn about our unique formulas!</p>
-    </section>
-    <section class="cta">
-        <h2>Call to Action</h2>
-        <p>Join us today!</p>
-    </section>
+        <p>Mieux automatiser vos tâches.</p>
+    </div>
+    <div class="formules">
+        <h2>Formules</h2>
+        <p>Découvrez nos formules variées.</p>
+    </div>
+    <div class="ctas">
+        <h2>Appelez à l'action</h2>
+        <p>Inscrivez-vous maintenant!</p>
+    </div>
     <footer>
-        <p>&copy; 2026 Vortex. All Rights Reserved.</p>
+        <p>&copy; 2026 French Vortex. Tous droits réservés.</p>
     </footer>
+    <script>
+        // Custom cursor functionality
+        const cursor = document.createElement('div');
+        cursor.style.width = '10px';
+        cursor.style.height = '10px';
+        cursor.style.borderRadius = '50%';
+        cursor.style.backgroundColor = 'black';
+        cursor.style.position = 'absolute';
+        cursor.style.pointerEvents = 'none';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+
+        // Navigation with scroll effects
+        const nav = document.querySelector('nav');
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Counter animations
+        let counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            let count = 0;
+            let target = parseInt(counter.getAttribute('data-target'));
+            let speed = 200;
+            let interval = setInterval(() => {
+                count += 1;
+                counter.innerText = count;
+                if (count === target) {
+                    clearInterval(interval);
+                }
+            }, speed / target);
+        });
+    </script>
 </body>
 </html>
